@@ -2,7 +2,7 @@
 
 A 10-day full stack web development bootcamp covering everything from JavaScript fundamentals to deploying production-ready applications. This repository contains hands-on exercises and projects completed throughout the course.
 
-> **Note:** Currently only Day 1 and Day 2 are implemented. The remaining days will be added as the course progresses.
+> **Note:** Currently Day 1, Day 2, and Day 3 are implemented. The remaining days will be added as the course progresses.
 
 ---
 
@@ -19,12 +19,16 @@ A 10-day full stack web development bootcamp covering everything from JavaScript
 - ES6+ concepts
 - Async/await, promises
 - Modules and project structure
+- Express.js basics (server setup, JSON responses)
+- Unit testing with Jest
 
-### Day 3: Node.js Fundamentals 🔜
+### Day 3: Node.js Fundamentals ✅
 
-- Node.js runtime and architecture
-- npm, package.json
-- File handling and basic server creation
+- Event loop & async execution (fetch, setTimeout, async/await)
+- File system operations (read, write, create directories)
+- Building an HTTP server with the `http` module
+- Serving JSON data from files
+- Routing and request handling
 
 ### Day 4: Express.js and API Development 🔜
 
@@ -83,8 +87,23 @@ A 10-day full stack web development bootcamp covering everything from JavaScript
 │   └── forLoop.js
 │
 ├── secondDay/      # Day 2 - JavaScript for backend development
-│   ├── index.js
-│   └── package.json
+│   ├── app.js          # Express server setup
+│   ├── index.js        # Server entry point
+│   ├── package.json
+│   ├── jest.config.js
+│   └── __tests__/
+│       └── index.spec.js
+│
+├── thirdDay/       # Day 3 - Node.js fundamentals
+│   ├── eventLoop/
+│   │   └── event-loop.js    # Event loop & async demo
+│   ├── fileSystem/
+│   │   └── file-system.js   # File system operations (read/write/mkdir)
+│   ├── httpServer/
+│   │   └── httpServer.js    # HTTP server with routing
+│   └── data/
+│       ├── posts.json       # Sample blog post data
+│       └── posts2.json
 ```
 
 ## Getting Started
@@ -107,4 +126,20 @@ node variables.js
 cd secondDay
 npm install
 node index.js
+```
+
+### Run Day 3 Examples
+
+```bash
+# Event loop demo
+cd thirdDay/eventLoop
+node event-loop.js
+
+# File system operations
+cd thirdDay/fileSystem
+node file-system.js
+
+# HTTP server (runs on port 5000)
+cd thirdDay/httpServer
+node httpServer.js
 ```
