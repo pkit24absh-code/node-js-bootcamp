@@ -2,6 +2,7 @@ async function getData() {
   const url = "https://jsonplaceholder.typicode.com/todos";
   try {
     const response = await fetch(url);
+    console.log(response)
     console.log(response.ok);
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);

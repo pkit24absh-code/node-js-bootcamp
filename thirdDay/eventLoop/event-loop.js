@@ -1,8 +1,6 @@
 // day-3-demo/event-loop.js
 console.log("1. Start");
-
-setTimeout(() => console.log("2. setTimeout 0ms"), 1);
-
+setTimeout(() => console.log("2. setTimeout 0ms"), 0);
 (async function asyncFunc() {
     console.log("5. Inside async function");
     const url = "https://jsonplaceholder.typicode.com/todos/1";
@@ -20,6 +18,4 @@ setTimeout(() => console.log("2. setTimeout 0ms"), 1);
         console.error(error.message);
     }
 }())
-
-
 console.log("4. End");
